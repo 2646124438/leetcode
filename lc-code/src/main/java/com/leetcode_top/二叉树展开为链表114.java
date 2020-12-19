@@ -1,9 +1,12 @@
-package main.java.com.jianshu;
+package com.leetcode_top;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * 目前尚未解决
+ */
 public class 二叉树展开为链表114 {
     public class TreeNode{
         int val;
@@ -19,7 +22,7 @@ public class 二叉树展开为链表114 {
     }
     TreeNode result;
     public void flatten(TreeNode root) {
-        List<Integer> result = new ArrayList<>();
+        List<Integer> result = new ArrayList<Integer>();
         preOrder(root, temp);
         root = result.right;
     }

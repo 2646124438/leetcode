@@ -1,4 +1,4 @@
-package main.java.com.jianshu;
+package com.leetcode_top;
 
 public class 接雨水42 {
     public int trap(int[] height) {
