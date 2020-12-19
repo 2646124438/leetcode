@@ -1,4 +1,4 @@
-package main.java.com.jianshu;
+package com.leetcode_top;
 
 import java.util.ArrayList;
 import java.util.List;

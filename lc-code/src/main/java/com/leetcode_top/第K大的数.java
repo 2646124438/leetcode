@@ -1,4 +1,4 @@
-package main.java.com.jianshu;
+package com.leetcode_top;
 
 public class 第K大的数 {
     public void quickSort(int[] nums, int K, int begin, int end){

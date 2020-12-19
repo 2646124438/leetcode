@@ -1,4 +1,4 @@
-package main.java.com.jianshu;
+package com.leetcode_top;
 
 public class 爬楼梯70 {
     int result = 0;

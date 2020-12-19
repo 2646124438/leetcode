@@ -1,4 +1,4 @@
-package main.java.com.jianshu;
+package com.leetcode_top;
 
 public class 跳跃游戏55 {
     public boolean canJump(int[] nums) {
