@@ -22,30 +22,22 @@ public class 二叉树展开为链表114 {
     }
     TreeNode result;
     public void flatten(TreeNode root) {
-        List<Integer> result = new ArrayList<Integer>();
-        preOrder(root, temp);
-        root = result.right;
-    }
-    public void preOrder(TreeNode root, TreeNode temp){
-        if(root==null) return;
-        int val = root.val;
-        temp.right = new TreeNode(val);
-        temp.left = null;
-        temp = temp.right;
-        dfs(root.right, temp);
-        dfs(root.left, temp);
+        List<TreeNode> inOrderList= new ArrayList<>();
+        preorder(root, inOrderList);
+        for(int i=1;i<inOrderList.size();i++){
+            TreeNode pre = inOrderList.get(i-1);
+            TreeNode curr = inOrderList.get(i);
+            pre.left = null;
+            pre.right = curr;
+        }
     }
 
-    public LinkNode reverLinkedNode(LinkNode head){
-        LinkNode curr = head;
-        LinkNode pre = null;
-        while(curr==null){
-            LinkNode temp = curr.next;
-            curr.next = pre;
-            pre = curr;
-            curr = temp;
-        }
-        return pre;
+    public void preorder(TreeNode root, List<TreeNode> preList){
+        if(root==null) return ;
+        preList.add(root);
+        preorder(root.left, preList);
+
+        preorder(root.right, preList);
     }
 
 }
