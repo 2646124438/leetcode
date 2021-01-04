@@ -4,15 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class 全排列46 {
-    List<List<Integer>> result = new ArrayList<>();
+    List<List<Integer>> result = new ArrayList<List<Integer>>();
     public List<List<Integer>> permuteUnique(int[] nums) {
         boolean[] used = new boolean[nums.length];
-        back(nums, new ArrayList<>(), used);
+        back(nums, new ArrayList<Integer>(), used);
         return this.result;
     }
     private void back(int[] nums, List<Integer> temp, boolean[] used){
         if(temp.size()==nums.length){
-            this.result.add(new ArrayList<>(temp));
+            this.result.add(new ArrayList<Integer>(temp));
             return ;
         }
         for(int i=0;i<nums.length;i++) {

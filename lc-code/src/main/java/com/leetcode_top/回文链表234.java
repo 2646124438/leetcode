@@ -43,8 +43,10 @@ public class 回文链表234 {
 
     public static void main(String[] args) {
         ListNode head = new ListNode(0);
+
         ListNode h2 = new ListNode(0);
         head.next = h2;
+
         new 回文链表234().isPalindrome(head);
     }
 }

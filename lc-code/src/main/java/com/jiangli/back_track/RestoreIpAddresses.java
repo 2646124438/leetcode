@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RestoreIpAddresses {
-    private List<String> result=new ArrayList<>();
+    private List<String> result=new ArrayList<String>();
     public List<String> restoreIpAddresses(String s) {
 
         for(int i=3;i>=1;i--) {
-            List<String> item = new ArrayList<>();
+            List<String> item = new ArrayList<String>();
 //            item.add(s.substring(0, i));
             helper(s, 1, 0, i, item);
-        }List<String> item = new ArrayList<>();
+        }List<String> item = new ArrayList<String>();
         return this.result;
     }
 
