@@ -18,7 +18,6 @@ public class 移动零283 {
             left++;
         }
     }
-
     public static void main(String[] args) {
         int[] arr = new int[]{0,1,0,3,12};
         new 移动零283().moveZeroes(arr);
