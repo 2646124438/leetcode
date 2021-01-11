@@ -1,7 +1,6 @@
 package main.java.com.leetcode_topic.tanxin;
 
-import java.util.Arrays;
-import java.util.Comparator;
+import java.util.*;
 
 public class 根据身高重建队列406 {
 //    假设有打乱顺序的一群人站成一个队列，数组 people 表示队列中一些人的属性（不一定按顺序）。
@@ -10,34 +9,20 @@ public class 根据身高重建队列406 {
 //    其中 queue[j] = [hj, kj] 是队列中第 j 个人的属性（queue[0] 是排在队列前面的人）。
 
     public int[][] reconstructQueue(int[][] people) {
-        int[][] queue = new int[people.length][people[0].length];
         Arrays.sort(people, new Comparator<int[]>() {
             @Override
-            public int compare(int[] t0, int[] t1){
-                if(t0[1]==t1[1]) return t0[0]-t1[0];
-                return t0[1]-t1[1];
+            public int compare(int[] t0, int[] t1) {
+                if(t0[0]==t1[0]) return t0[1]-t1[1];
+                return t1[0]-t0[0];
             }
         });
+        LinkedList<int[]> linkedList = new LinkedList<int[]>();
         for(int i=0;i<people.length;i++){
-            int[] peopleItem = people[i];
-            int h0 = peopleItem[0];
-            int h1 = peopleItem[1];
-            int k = h0;
-            for(int j=i+1;j<people.length;j++){
-                int hj0 = people[j][0];
-                int hj1 = people[j][1];
-                if(hj1!=h1){
-                    break;
-                }
-                if(k>hj0){
-                    int[] temp = new int[]{hj0, hj1};
-                    people[j] = people[i];
-                    people[i] = temp;
-                }
-            }
+            linkedList.add(people[i][1], people[i]);
         }
-        return people;
+        return linkedList.toArray(new int[linkedList.size()][2]);
     }
+
 
     public static void main(String[] args) {
 //        [[7,0],[4,4],[7,1],[5,0],[6,1],[5,2]]
