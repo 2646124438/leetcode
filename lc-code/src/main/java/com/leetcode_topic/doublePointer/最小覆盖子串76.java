@@ -73,6 +73,4 @@ public class 最小覆盖子串76 {
 //        String result = new 最小覆盖子串76().minWindow("aa", "aa");
         System.out.println(result);
     }
-
-
 }
