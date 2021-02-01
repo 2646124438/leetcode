@@ -1,4 +1,4 @@
-/lc-code/target/
+/lc-code/target/*
 *.class
 .idea/compiler.xml
 .idea/misc.xml
