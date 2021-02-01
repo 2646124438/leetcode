@@ -9,8 +9,8 @@
         <module name="lc-code" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="lc-code" target="1.5" />
+    <bytecodeTargetLevel target="8">
+      <module name="lc-code" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>
