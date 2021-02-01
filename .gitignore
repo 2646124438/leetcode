@@ -2,4 +2,5 @@
 *.class
 .idea/compiler.xml
 .idea/misc.xml
+.idea/*
 lc-code/lc-code.iml
